@@ -12,7 +12,7 @@ webform.addEventListener('submit', (e) => {
     var searchText = inputText.value
     messageTwo.textContent = "Loading..."
     messageOne.textContent = ""
-    fetch(`http://localhost:3000/weather?address=${searchText}`).then((response) => {
+    fetch(`/weather?address=${searchText}`).then((response) => {
         response.json().then((data) => {
             if (data.error)
                 messageTwo.textContent = data.error

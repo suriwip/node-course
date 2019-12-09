@@ -3,6 +3,7 @@ const express = require('express')
 const hbs = require('hbs')
 const geoCode = require('./utils/geocode')
 var app = express()
+const port = process.env.PORT || 3000
 
 var publicFolderPath = path.join(__dirname, '../public')
 var templatesPath = path.join(__dirname, '../templates/views')
@@ -76,6 +77,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Listening on port 3000')
+app.listen(port, () => {
+    console.log('Listening on port ' + port)
 })
