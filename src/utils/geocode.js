@@ -20,7 +20,7 @@ const getGeoCode = (address, callback) => {
 }
 
 const getForecast = (latitude, longitude, callback) => {
-    var url = 'https://api.darksky.net/forecast/b37c1b38262b9f94bf97b05c389e38c3/' + longitude + ',' + latitude
+    var url = 'https://api.darksky.net/forecast/b37c1b38262b9f94bf97b05c389e38c3/' + longitude + ',' + latitude + '?units=si'
 
     request({ url: url, json: true }, (error, { body }) => {
         if (error) {

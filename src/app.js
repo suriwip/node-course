@@ -16,7 +16,7 @@ hbs.registerPartials(partialsPath)
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Home',
+        title: 'Weather',
         name: 'Suresh Patil'
     })
 })
@@ -52,7 +52,7 @@ app.get('/weather', (req, res) => {
                 })
             res.send({
                 location,
-                forecast: `Current temperature is ${forecastResponse.currentTemperature} with ${forecastResponse.rain} chance of rain`,
+                forecast: `Current temperature is ${forecastResponse.currentTemperature} degree celcius with ${forecastResponse.rain} chance of rain`,
                 address: req.query.address
             })
         })
